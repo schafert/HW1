@@ -17,16 +17,21 @@ Helpful resources for R/Git/Github integration for troubleshooting:
 
 ## Part 2: Other tools installation
 
+* TeX: a good distribution for R users is *TinyTex* which can be installed via the package [**tinytex**](https://yihui.org/tinytex/):
+
+```r
+install.packages('tinytex')
+tinytex::install_tinytex()
+# to uninstall TinyTeX, run tinytex::uninstall_tinytex() 
+```
+
 If you are a **Windows** user:
 
 * Install [Rtools](https://cran.rstudio.com/bin/windows/Rtools/) 
-* Install [MikTex LaTeX](http://miktex.org/download)
-
 
 If you are a **Mac OS** user:
 
 * Install [Xcode](http://itunes.apple.com/us/app/xcode/id497799835?mt=12). Within XCode go to Preferences: Downloads and install the Command Line Tools.
-* Install [MacTex LaTeX](http://www.tug.org/mactex/downloading.html)
 
 For other operating systems, see [Rstudio guide](https://support.rstudio.com/hc/en-us/articles/200486498-Package-Development-Prerequisites) for necessary tools.
 
@@ -89,7 +94,7 @@ as.matrix(x_a) # goes from (a) to (b)
 
 2. **SimpleProgram.R** is a script that illustrates the use of functions in 1. First, it creates training data $(X, Y)$ based on given model parameters, calculates least-squares vector of coefficients and evaluates estimation error. Secondly, it creates testing data $(Xtest, Ytest)$ and evaluates prediction error using (a) all covariates; (b) using only the first covariate. The missing parts of the code are indicated by [ToDo], **do not use any external libraries or functions such as lm** and do not erase any of the comments. Make sure to make consistent commits throughout and push your changes to GitHub in the end.
 
-3. **Tests.R**. As you work through the functions in 1., you undoubtedly would want to test them on some toy examples, or perhaps compare a couple of versions. Perhaps you want to make modification to 2 and see how results are affected. This .R file is designed to save you corresponding work, and to make sure that the tests are separate from functions. **You are allowed to use any external libraries  or functions that you would like for testing and debugging your code here**
+3. **Tests.R**. As you work through the functions in 1., you undoubtedly would want to test them on some toy examples, or perhaps compare a couple of versions. Perhaps you want to make modification to 2 and see how results are affected. This .R file is designed to save you corresponding work, and to make sure that the tests are separate from functions. **You are allowed to use any external libraries or functions that you would like for testing and debugging your code here**
 
 
 ## Grading
